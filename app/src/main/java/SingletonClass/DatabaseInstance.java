@@ -11,14 +11,14 @@ public class DatabaseInstance {
     private Context mCtx;
     private static DatabaseInstance mInstance;
 
-    //our app database object
+    // app database object
     private AppDatabase appDatabase;
 
     private DatabaseInstance(Context mCtx) {
         this.mCtx = mCtx;
 
-        //creating the app database with Room database builder
-        //MyToDos is the name of the database
+        // creating the app database with Room database builder
+        // MyToDos is the name of the database
         appDatabase = Room.databaseBuilder(mCtx, AppDatabase.class, "MyToDos").build();
     }
 
