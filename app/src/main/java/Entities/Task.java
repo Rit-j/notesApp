@@ -25,20 +25,6 @@ public class Task implements Serializable {
     @ColumnInfo(name = "finished")
     private boolean finished;
 
-//    @ColumnInfo(name = "date_time")
-//    private String dateTime;
-//
-//    public String getDateTime() {
-//        return dateTime;
-//    }
-//
-//    public void setDateTime(String dateTime) {
-//        this.dateTime = dateTime;
-//    }
-
-    /*
-     * Getters and Setters
-     * */
     public int getId() {
         return id;
     }
