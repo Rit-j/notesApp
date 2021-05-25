@@ -22,8 +22,7 @@ import SingletonClass.DatabaseInstance;
 public class AddTaskActivity extends AppCompatActivity {
 
     private EditText editTextTask, editTextDesc, editTextFinishBy;
-   // private TextView dateTime;
-
+   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +31,6 @@ public class AddTaskActivity extends AppCompatActivity {
         editTextTask = findViewById(R.id.editTextTask);
         editTextDesc = findViewById(R.id.editTextDesc);
         editTextFinishBy = findViewById(R.id.editTextFinishBy);
-
-//        dateTime = findViewById(R.id.textDateTime);
-//        dateTime.setText(new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm a", Locale.getDefault())
-//              .format(new Date())
-//        );
 
         findViewById(R.id.button_save).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,17 +68,12 @@ public class AddTaskActivity extends AppCompatActivity {
             @Override
             protected Void doInBackground(Void... voids) {
 
-                //creating a task
                 Task task = new Task();
                 task.setTask(sTask);
                 task.setDesc(sDesc);
                 task.setFinishBy(sFinishBy);
                 task.setFinished(false);
 
-                // set date time
-                //task.setDateTime(dateTime.getText().toString());
-
-                //adding to database
                 DatabaseInstance.getInstance(getApplicationContext()).getAppDatabase()
                         .taskDao()
                         .insert(task);
