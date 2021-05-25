@@ -15,7 +15,6 @@ import android.widget.EditText;
 
 import com.example.mynotesapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.List;
 
 import Adapter.TasksAdapter;
@@ -44,11 +43,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         getTasks();
 
     }
-
 
     private void getTasks() {
         class GetTasks extends AsyncTask<Void, Void, List<Task>> {
