@@ -33,10 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recyclerview_tasks);
-        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-
-
 
         buttonAddTask = findViewById(R.id.floating_button_add);
         buttonAddTask.setOnClickListener(new View.OnClickListener() {
@@ -95,9 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-            // Search code over..
-
-
+           
             }
         }
 
