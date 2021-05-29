@@ -35,6 +35,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TasksViewHol
     private Context mCtx;
     private List<Task> taskList;
 
+    // Timer is a facility for threads to schedule tasks for future execution in a background thread.
     private Timer timer;
     private List<Task> taskSource;
 
